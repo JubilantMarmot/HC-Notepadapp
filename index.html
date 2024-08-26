@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>windows notepad app</title>
+    <title>Notepad App</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -25,6 +25,7 @@
             border: 1px solid #cccccc;
             border-radius: 5px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: auto;
         }
         #toolbar {
             margin-bottom: 10px;
@@ -34,6 +35,9 @@
         }
         .btn-group button:not(:last-child) {
             border-right: 1px solid #cccccc;
+        }
+        #status {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -45,8 +49,11 @@
             <button id="load" class="btn btn-secondary">Load</button>
             <button id="wordCount" class="btn btn-info">Word Count</button>
             <button id="charCount" class="btn btn-info">Character Count</button>
+            <button id="clear" class="btn btn-danger">Clear</button>
+            <button id="fontSize" class="btn btn-warning">Font Size</button>
         </div>
         <textarea id="editor" class="form-control" placeholder="Start typing..."></textarea>
+        <div id="status" class="text-muted">Word Count: 0 | Character Count: 0</div>
     </div>
     <script src="app.js"></script>
 </body>
